@@ -5,6 +5,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+   
+   
+    
 `;
 
 export const Title = styled.h1`
@@ -82,27 +85,75 @@ export const Th = styled.th`
 `;
 
 export const Td = styled.td`
-    padding: 12px;
-    border: 1px solid #ccc;
+  padding: 12px;
+  border: 1px solid #ccc;
 
-    button{
-      background-color: transparent;
-      border:none;
-      display: inline;
-      transition: all ease-in-out .2s;
+  button {
+    background-color: transparent;
+    border: none;
+    display: inline;
+    transition: all ease-in-out 0.2s;
 
-      &:hover{
+    &:active {
+      opacity: 0.5;
+    }
+
+    &[data-type="delete"]:hover {
+      color: red;
+    }
+
+    &[data-type="edit"]:hover {
+      color: green;
+    }
+  }
+`;
+
+export const TrEven = styled.tr`
+    background-color: #f9f9f9; /* Cor de fundo das linhas pares */
+`;
+
+
+export const ButtonToLogout = styled.button`
+
+border: none;
+width: 140px;
+height: 50px;
+background-color: red;
+color:white;
+border-radius: 10px;
+font-weight: 500;
+margin-top: 1%;
+cursor: pointer;
+transition: all ease-in-out .2s;
+
+
+&:hover{
          opacity: .7;
       }
     
       &:active{
          opacity: .5;
       }
-      
 
-    }
-`;
 
-export const TrEven = styled.tr`
-    background-color: #f9f9f9; /* Cor de fundo das linhas pares */
-`;
+
+
+
+
+
+
+
+`
+
+
+export const DivToButton = styled.div`
+
+
+margin-left: 83%;
+button{
+  margin-top: 10%;
+}
+
+
+
+`
